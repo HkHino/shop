@@ -7,7 +7,6 @@ public class ShoppingWindow
     //attributes
     boolean isRunning = true;
 
-
     public void menu()
     {
         System.out.println("hello and welcome! what would you like to do today?");
@@ -16,6 +15,8 @@ public class ShoppingWindow
                 press 2) to view cart
                 press 3) to view state tax chart
                 press 4) to view discounts
+                press 5) to go to checkout
+                press 6) to exit the shop
                 """);
         while (isRunning == true)
         {
@@ -32,6 +33,14 @@ public class ShoppingWindow
                     System.out.println("this is your cart");
                     System.out.println(shopageddon.getItem());
                     isRunning = true;
+                    System.out.println("""
+                            press 1) to shop
+                            press 2) to view cart
+                            press 3) to view state tax chart
+                            press 4) to view discounts
+                            press 5) to go to checkout
+                            press 6) to exit the shop
+                            """);
                     break;
 
                 case 3:
@@ -46,10 +55,18 @@ public class ShoppingWindow
                             $50000             15%
                             """);
                     isRunning = true;
+                    System.out.println("""
+                            press 1) to shop
+                            press 2) to view cart
+                            press 3) to view state tax chart
+                            press 4) to view discounts
+                            press 5) to go to checkout
+                            press 6) to exit the shop
+                            """);
                     break;
 
                 case 4:
-                    System.out.println("this is the statetax in various states");
+                 System.out.println("this is the statetax in various states");
                     System.out.println("""
                             State           Tax Rate
                             UT              6,85%
@@ -59,13 +76,20 @@ public class ShoppingWindow
                             CA              6,25%
                                                     
                             """);
+
                     isRunning = true;
+                    System.out.println("""
+                            press 1) to shop
+                            press 2) to view cart
+                            press 3) to view state tax chart
+                            press 4) to view discounts
+                            press 5) to go to checkout
+                            press 6) to exit the shop
+                            """);
                     break;
                 case 5:
                     System.out.println("thank you for shopping with us today!");
-                    MathStuff mathStuff = new MathStuff();
-                    mathStuff.checkout();
-
+                    new MathStuff().checkout();
                     isRunning = false;
                 case 6:
                     System.out.println("thank you for shopping with us today goodbye");
